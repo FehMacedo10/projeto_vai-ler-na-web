@@ -1,0 +1,5 @@
+{
+    "rotas": [{"origem":
+"/[^.]+", "destino": "/",
+"status": 200 }]
+}
