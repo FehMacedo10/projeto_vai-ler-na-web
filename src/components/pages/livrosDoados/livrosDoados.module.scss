@@ -88,11 +88,7 @@ $fonte-padrao: "Inter", "Sans-Serif";
       padding: 0;
       justify-items: center;
       display: grid;
-      grid-template-columns: repeat(
-        4 feat: atualizar a estrutura do projeto e adicionar dependências do
-          axios,
-        1fr
-      );
+      grid-template-columns: repeat(4, 1fr);
       gap: 0.5rem;
 
       section {
