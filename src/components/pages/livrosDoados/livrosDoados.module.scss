@@ -1,109 +1,109 @@
-$fonte-padrao: 'Inter', 'Sans-Serif';
+$fonte-padrao: "Inter", "Sans-Serif";
 
 .livrosDoadosSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  h2 {
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    font-size: 2rem;
+    font-family: $fonte-padrao;
+    font-weight: 700;
+  }
+
+  .containerCards {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    gap: 2.5rem;
+    width: 90%;
+    height: 170vh;
+    padding: 0 0 150% 0;
 
-    h2 {
-        display: flex;
-        align-items: center;
-        height: 20vh;
-        font-size: 2rem;
+    section {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      border: solid 3px #005695;
+      border-radius: 20px;
+      padding: 1rem;
+      align-items: center;
+      height: 40vh;
+      width: 55%;
+      transition: transform 0.2s;
+      box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+        rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      img {
+        width: 50%;
+        padding: 0 0 1rem 0;
+      }
+
+      div {
         font-family: $fonte-padrao;
-        font-weight: 700;
-        
-    }
+        font-size: 0.75rem;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center;
 
-    .containerCards {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        gap: 2.5rem;
-        width: 90%;
-        height: 170vh;
-        padding: 0 0 150% 0;
-
-        section {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            border: solid 3px #005695;
-            border-radius: 20px;
-            padding: 1rem;
-            align-items: center;
-            height: 40vh;
-            width: 55%;
-            transition: transform 0.2s;
-            box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-    
-            &:hover {
-                transform: scale(1.05);
-            }
-            
-
-            img {
-                width: 50%;
-                padding: 0 0 1rem 0;
-            }
-
-            div {
-                font-family: $fonte-padrao;
-                font-size: 0.75rem;
-                font-weight: 400;
-                line-height: 20px;
-                text-align: center;
-
-                h3 {
-                    font-weight: normal;
-                    font-family: $fonte-padrao;
-                    font-size: 0.75rem;
-                }   
-            }
+        h3 {
+          font-weight: normal;
+          font-family: $fonte-padrao;
+          font-size: 0.75rem;
         }
+      }
     }
+  }
 }
 
 @media (min-width: 641px) {
-    .livrosDoadosSection {
-        h2 {
-            height: 15vh;
-        }
-
-        .containerCards {
-            height: 140vh;
-            gap: 4rem;
-
-            section {
-                width: 60%;
-        
-            }
-        }
+  .livrosDoadosSection {
+    h2 {
+      height: 15vh;
     }
+
+    .containerCards {
+      height: 140vh;
+      gap: 4rem;
+
+      section {
+        width: 60%;
+      }
+    }
+  }
 }
 
 @media (min-width: 1024px) {
-    .livrosDoadosSection {
-        
-        .containerCards {
-            padding: 0;
-            justify-items: center;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0.5rem;
-            
-            
-            section { 
-                div {
-                    font-size: 1rem;
+  .livrosDoadosSection {
+    .containerCards {
+      padding: 0;
+      justify-items: center;
+      display: grid;
+      grid-template-columns: repeat(
+        4 feat: atualizar a estrutura do projeto e adicionar dependências do
+          axios,
+        1fr
+      );
+      gap: 0.5rem;
 
-                    h3 {
-                        font-size: 1rem;
-                    }
-                }
-            }
+      section {
+        div {
+          font-size: 1rem;
+
+          h3 {
+            font-size: 1rem;
+          }
         }
+      }
     }
+  }
 }
